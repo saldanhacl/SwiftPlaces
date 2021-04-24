@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A719263449B700CC7B95 /* AppDelegate.swift */; };
-		07A2A71C263449B700CC7B95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A71B263449B700CC7B95 /* SceneDelegate.swift */; };
 		07A2A71E263449B700CC7B95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A71D263449B700CC7B95 /* ViewController.swift */; };
 		07A2A721263449B700CC7B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A71F263449B700CC7B95 /* Main.storyboard */; };
 		07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A722263449B800CC7B95 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		07A2A716263449B700CC7B95 /* SwiftPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A2A719263449B700CC7B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07A2A71B263449B700CC7B95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07A2A71D263449B700CC7B95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07A2A720263449B700CC7B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07A2A722263449B800CC7B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,13 +97,12 @@
 		07A2A718263449B700CC7B95 /* SwiftPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				07A2A719263449B700CC7B95 /* AppDelegate.swift */,
-				07A2A71B263449B700CC7B95 /* SceneDelegate.swift */,
-				07A2A71D263449B700CC7B95 /* ViewController.swift */,
-				07A2A71F263449B700CC7B95 /* Main.storyboard */,
-				07A2A722263449B800CC7B95 /* Assets.xcassets */,
-				07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */,
-				07A2A727263449B800CC7B95 /* Info.plist */,
+				07A2A75426344AFE00CC7B95 /* Service */,
+				07A2A75326344AF900CC7B95 /* Model */,
+				07A2A75226344AEF00CC7B95 /* View */,
+				07A2A75126344AE400CC7B95 /* Presenter */,
+				07A2A75026344ADE00CC7B95 /* Resources */,
+				07A2A74F26344ACB00CC7B95 /* App */,
 			);
 			path = SwiftPlaces;
 			sourceTree = "<group>";
@@ -126,6 +123,54 @@
 				07A2A73D263449B800CC7B95 /* Info.plist */,
 			);
 			path = SwiftPlacesUITests;
+			sourceTree = "<group>";
+		};
+		07A2A74F26344ACB00CC7B95 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A727263449B800CC7B95 /* Info.plist */,
+				07A2A719263449B700CC7B95 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		07A2A75026344ADE00CC7B95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A722263449B800CC7B95 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07A2A75126344AE400CC7B95 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		07A2A75226344AEF00CC7B95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A71D263449B700CC7B95 /* ViewController.swift */,
+				07A2A71F263449B700CC7B95 /* Main.storyboard */,
+				07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07A2A75326344AF900CC7B95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07A2A75426344AFE00CC7B95 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +305,6 @@
 			files = (
 				07A2A71E263449B700CC7B95 /* ViewController.swift in Sources */,
 				07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */,
-				07A2A71C263449B700CC7B95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NBU5KYTB66;
-				INFOPLIST_FILE = SwiftPlaces/Info.plist;
+				INFOPLIST_FILE = SwiftPlaces/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NBU5KYTB66;
-				INFOPLIST_FILE = SwiftPlaces/Info.plist;
+				INFOPLIST_FILE = SwiftPlaces/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
