@@ -24,5 +24,4 @@ class MainRouter: RouterProtocol {
     func start() {
         placesRouter.start()
     }
-
 }

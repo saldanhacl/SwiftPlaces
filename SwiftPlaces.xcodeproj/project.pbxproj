@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A719263449B700CC7B95 /* AppDelegate.swift */; };
-		07A2A71E263449B700CC7B95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A71D263449B700CC7B95 /* ViewController.swift */; };
-		07A2A721263449B700CC7B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A71F263449B700CC7B95 /* Main.storyboard */; };
 		07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A722263449B800CC7B95 /* Assets.xcassets */; };
 		07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */; };
 		07A2A731263449B800CC7B95 /* SwiftPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A730263449B800CC7B95 /* SwiftPlacesTests.swift */; };
@@ -23,6 +21,9 @@
 		07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A77A2634527D00CC7B95 /* MainRouter.swift */; };
 		07A2A7892634583C00CC7B95 /* PlacesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7882634583C00CC7B95 /* PlacesFactory.swift */; };
 		07A2A7912634598100CC7B95 /* PlacesDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */; };
+		07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */; };
+		07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */; };
+		07A2A7A42634703500CC7B95 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7A32634703500CC7B95 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,6 @@
 /* Begin PBXFileReference section */
 		07A2A716263449B700CC7B95 /* SwiftPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A2A719263449B700CC7B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07A2A71D263449B700CC7B95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		07A2A720263449B700CC7B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07A2A722263449B800CC7B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07A2A725263449B800CC7B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07A2A727263449B800CC7B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +64,9 @@
 		07A2A77A2634527D00CC7B95 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		07A2A7882634583C00CC7B95 /* PlacesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesFactory.swift; sourceTree = "<group>"; };
 		07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsPresenter.swift; sourceTree = "<group>"; };
+		07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		07A2A7A32634703500CC7B95 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +176,8 @@
 		07A2A75226344AEF00CC7B95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07A2A7A22634701E00CC7B95 /* Elements */,
 				07A2A763263450DB00CC7B95 /* Places */,
-				07A2A71D263449B700CC7B95 /* ViewController.swift */,
-				07A2A71F263449B700CC7B95 /* Main.storyboard */,
 				07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -212,6 +213,8 @@
 				07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */,
 				07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */,
 				07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */,
+				07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */,
+				07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -222,6 +225,14 @@
 				07A2A7882634583C00CC7B95 /* PlacesFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		07A2A7A22634701E00CC7B95 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A7A32634703500CC7B95 /* CardView.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */,
+				07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */,
 				07A2A767263450FD00CC7B95 /* PlacesHomeViewController.xib in Resources */,
 				07A2A7712634511600CC7B95 /* PlacesDetailsViewController.xib in Resources */,
 				07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */,
-				07A2A721263449B700CC7B95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A2A71E263449B700CC7B95 /* ViewController.swift in Sources */,
 				07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */,
+				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
+				07A2A7A42634703500CC7B95 /* CardView.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
 				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,
 				07A2A7892634583C00CC7B95 /* PlacesFactory.swift in Sources */,
@@ -400,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07A2A71F263449B700CC7B95 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07A2A720263449B700CC7B95 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

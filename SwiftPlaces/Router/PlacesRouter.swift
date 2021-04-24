@@ -20,12 +20,12 @@ class PlacesRouter: PlacesRouterProtocol {
     }
     
     func start() {
-        let detailViewController = PlacesFactory.makePlacesHome(delegate: self)
-        navigationController?.pushViewController(detailViewController, animated: true)
+        let homeViewController = PlacesFactory.makePlacesHome(delegate: self)
+        navigationController?.pushViewController(homeViewController, animated: true)
     }
 
     func gotoPlaceDetail() {
-        let detailViewController = PlacesDetailsViewController()
+        let detailViewController = PlacesFactory.makePlacesDetail(delegate: self)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
@@ -36,4 +36,8 @@ extension PlacesRouter: PlacesHomePresenterDelegate {
     func routeToDetails() {
         self.gotoPlaceDetail()
     }
+}
+
+// MARK: PlacesDetailsPresenterDelegate
+extension PlacesRouter: PlacesDetailsPresenterDelegate {
 }
