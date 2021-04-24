@@ -10,9 +10,12 @@ import UIKit
 class PlaceCardCollectionViewCell: UICollectionViewCell {
     
     static let reusableIdentifier: String = "placeCardCell"
-    @IBOutlet weak var placeName: UILabel!
+
+    @IBOutlet weak var placeImageView: UIImageView!
 
     func setupCell(placeName: String) {
-        self.placeName.text = placeName
+        let colors = UIColor.getProjectColors()
+        let placeHolderColor = colors[Int.random(in: 0 ..< colors.count)]
+        placeImageView.backgroundColor = placeHolderColor
     }
 }

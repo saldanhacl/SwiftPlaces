@@ -4,33 +4,31 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="placeCardCell" id="gTV-IL-0wX" customClass="PlaceCardCollectionViewCell" customModule="SwiftPlaces" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="254" height="247"/>
+            <rect key="frame" x="0.0" y="0.0" width="339" height="523"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="254" height="247"/>
+                <rect key="frame" x="0.0" y="0.0" width="339" height="523"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COB-5r-fUE" userLabel="Card View" customClass="CardView" customModule="SwiftPlaces" customModuleProvider="target">
-                        <rect key="frame" x="4" y="4" width="246" height="239"/>
+                        <rect key="frame" x="4" y="4" width="331" height="515"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvW-CV-f60">
-                                <rect key="frame" x="83" y="109" width="80.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-5L-cB8">
+                                <rect key="frame" x="0.0" y="0.0" width="331" height="360.5"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TvW-CV-f60" firstAttribute="centerX" secondItem="COB-5r-fUE" secondAttribute="centerX" id="fOj-mR-NLB"/>
-                            <constraint firstItem="TvW-CV-f60" firstAttribute="centerY" secondItem="COB-5r-fUE" secondAttribute="centerY" id="g9P-hC-bD1"/>
+                            <constraint firstItem="hqA-5L-cB8" firstAttribute="height" secondItem="COB-5r-fUE" secondAttribute="height" multiplier="0.7" id="4kt-kc-dwK"/>
+                            <constraint firstItem="hqA-5L-cB8" firstAttribute="top" secondItem="COB-5r-fUE" secondAttribute="top" id="4zy-rc-z3P"/>
+                            <constraint firstItem="hqA-5L-cB8" firstAttribute="leading" secondItem="COB-5r-fUE" secondAttribute="leading" id="JbL-Kj-sth"/>
+                            <constraint firstAttribute="trailing" secondItem="hqA-5L-cB8" secondAttribute="trailing" id="Q01-CD-zlA"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -56,16 +54,11 @@
                 <constraint firstAttribute="bottom" secondItem="COB-5r-fUE" secondAttribute="bottom" constant="4" id="maf-4V-0VS"/>
                 <constraint firstAttribute="trailing" secondItem="COB-5r-fUE" secondAttribute="trailing" constant="4" id="nUz-qh-hBx"/>
             </constraints>
-            <size key="customSize" width="254" height="247"/>
+            <size key="customSize" width="339" height="523"/>
             <connections>
-                <outlet property="placeName" destination="TvW-CV-f60" id="cCR-Wt-aqW"/>
+                <outlet property="placeImageView" destination="hqA-5L-cB8" id="6iE-a7-zEE"/>
             </connections>
-            <point key="canvasLocation" x="279.71014492753625" y="163.72767857142856"/>
+            <point key="canvasLocation" x="341.304347826087" y="256.13839285714283"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

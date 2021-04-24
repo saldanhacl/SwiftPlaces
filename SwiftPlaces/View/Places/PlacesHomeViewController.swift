@@ -12,7 +12,7 @@ class PlacesHomeViewController: UIViewController {
     var presenter: PlacesHomePresenter?
     
     @IBOutlet weak var placesCardsCollectionView: UICollectionView!
-    let places = ["Nome", "do", "lugar", "aqui"]
+    let places = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()

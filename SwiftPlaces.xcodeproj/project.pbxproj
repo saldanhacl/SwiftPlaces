@@ -24,6 +24,7 @@
 		07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */; };
 		07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */; };
 		07A2A7A42634703500CC7B95 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7A32634703500CC7B95 /* CardView.swift */; };
+		07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7AB2634816B00CC7B95 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		07A2A7A32634703500CC7B95 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		07A2A7AB2634816B00CC7B95 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				07A2A7A32634703500CC7B95 /* CardView.swift */,
+				07A2A7AB2634816B00CC7B95 /* Colors.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */,
+				07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
