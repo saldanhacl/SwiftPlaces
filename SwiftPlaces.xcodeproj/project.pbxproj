@@ -14,6 +14,15 @@
 		07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */; };
 		07A2A731263449B800CC7B95 /* SwiftPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A730263449B800CC7B95 /* SwiftPlacesTests.swift */; };
 		07A2A73C263449B800CC7B95 /* SwiftPlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A73B263449B800CC7B95 /* SwiftPlacesUITests.swift */; };
+		07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A75A2634506000CC7B95 /* PlacesRouter.swift */; };
+		07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A764263450FD00CC7B95 /* PlacesHomeViewController.swift */; };
+		07A2A767263450FD00CC7B95 /* PlacesHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */; };
+		07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */; };
+		07A2A7712634511600CC7B95 /* PlacesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */; };
+		07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A775263451F000CC7B95 /* PlacesHomePresenter.swift */; };
+		07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A77A2634527D00CC7B95 /* MainRouter.swift */; };
+		07A2A7892634583C00CC7B95 /* PlacesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7882634583C00CC7B95 /* PlacesFactory.swift */; };
+		07A2A7912634598100CC7B95 /* PlacesDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		07A2A737263449B800CC7B95 /* SwiftPlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A2A73B263449B800CC7B95 /* SwiftPlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPlacesUITests.swift; sourceTree = "<group>"; };
 		07A2A73D263449B800CC7B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A2A75A2634506000CC7B95 /* PlacesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRouter.swift; sourceTree = "<group>"; };
+		07A2A764263450FD00CC7B95 /* PlacesHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesHomeViewController.swift; sourceTree = "<group>"; };
+		07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesHomeViewController.xib; sourceTree = "<group>"; };
+		07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsViewController.swift; sourceTree = "<group>"; };
+		07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesDetailsViewController.xib; sourceTree = "<group>"; };
+		07A2A775263451F000CC7B95 /* PlacesHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesHomePresenter.swift; sourceTree = "<group>"; };
+		07A2A77A2634527D00CC7B95 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		07A2A7882634583C00CC7B95 /* PlacesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesFactory.swift; sourceTree = "<group>"; };
+		07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,8 @@
 		07A2A718263449B700CC7B95 /* SwiftPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				07A2A7872634582500CC7B95 /* Factory */,
+				07A2A7592634504300CC7B95 /* Router */,
 				07A2A75426344AFE00CC7B95 /* Service */,
 				07A2A75326344AF900CC7B95 /* Model */,
 				07A2A75226344AEF00CC7B95 /* View */,
@@ -145,6 +165,8 @@
 		07A2A75126344AE400CC7B95 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				07A2A775263451F000CC7B95 /* PlacesHomePresenter.swift */,
+				07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -152,6 +174,7 @@
 		07A2A75226344AEF00CC7B95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07A2A763263450DB00CC7B95 /* Places */,
 				07A2A71D263449B700CC7B95 /* ViewController.swift */,
 				07A2A71F263449B700CC7B95 /* Main.storyboard */,
 				07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */,
@@ -171,6 +194,34 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		07A2A7592634504300CC7B95 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A75A2634506000CC7B95 /* PlacesRouter.swift */,
+				07A2A77A2634527D00CC7B95 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		07A2A763263450DB00CC7B95 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A764263450FD00CC7B95 /* PlacesHomeViewController.swift */,
+				07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */,
+				07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */,
+				07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		07A2A7872634582500CC7B95 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A7882634583C00CC7B95 /* PlacesFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */,
+				07A2A767263450FD00CC7B95 /* PlacesHomeViewController.xib in Resources */,
+				07A2A7712634511600CC7B95 /* PlacesDetailsViewController.xib in Resources */,
 				07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */,
 				07A2A721263449B700CC7B95 /* Main.storyboard in Resources */,
 			);
@@ -304,6 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A71E263449B700CC7B95 /* ViewController.swift in Sources */,
+				07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */,
+				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
+				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
+				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
+				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,
+				07A2A7892634583C00CC7B95 /* PlacesFactory.swift in Sources */,
+				07A2A7912634598100CC7B95 /* PlacesDetailsPresenter.swift in Sources */,
 				07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
