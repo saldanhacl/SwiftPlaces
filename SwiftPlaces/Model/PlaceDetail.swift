@@ -12,5 +12,5 @@ struct PlaceDetail: Codable {
     let name: String
     let review: Double
     let type, about, phone, adress: String
-    let schedule: [Schedule]?
+    let schedule: Schedule?
 }

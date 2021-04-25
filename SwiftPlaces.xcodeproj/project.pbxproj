@@ -37,6 +37,9 @@
 		07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */; };
 		07A2A7A42634703500CC7B95 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7A32634703500CC7B95 /* CardView.swift */; };
 		07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7AB2634816B00CC7B95 /* Colors.swift */; };
+		07FB74AE263627AE00900CE9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74AD263627AE00900CE9 /* Image.swift */; };
+		07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74B2263627EE00900CE9 /* PhotosService.swift */; };
+		07FB74B82636287E00900CE9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74B72636287E00900CE9 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		07A2A7A32634703500CC7B95 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		07A2A7AB2634816B00CC7B95 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		07FB74AD263627AE00900CE9 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		07FB74B2263627EE00900CE9 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		07FB74B72636287E00900CE9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,7 @@
 				079F62E926359A410029A2C5 /* PlaceDetail.swift */,
 				079F62EE26359A4A0029A2C5 /* Schedule.swift */,
 				079F62F326359B510029A2C5 /* PlaceDetailViewModel.swift */,
+				07FB74B72636287E00900CE9 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 			children = (
 				079F62F82635AC210029A2C5 /* PlacesService.swift */,
 				079F62FD2635AD930029A2C5 /* APIService.swift */,
+				07FB74B2263627EE00900CE9 /* PhotosService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -252,12 +260,9 @@
 		07A2A763263450DB00CC7B95 /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				07A2A764263450FD00CC7B95 /* PlacesHomeViewController.swift */,
-				07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */,
-				07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */,
-				07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */,
-				07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */,
-				07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */,
+				07C6B19F263623A200774C08 /* Card */,
+				07C6B19E2636239E00774C08 /* Detail */,
+				07C6B19D2636239A00774C08 /* Home */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -278,8 +283,36 @@
 				079F62C8263585AA0029A2C5 /* Labels.swift */,
 				079F62CD263585F20029A2C5 /* Fonts.swift */,
 				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
+				07FB74AD263627AE00900CE9 /* Image.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		07C6B19D2636239A00774C08 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A764263450FD00CC7B95 /* PlacesHomeViewController.swift */,
+				07A2A765263450FD00CC7B95 /* PlacesHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		07C6B19E2636239E00774C08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */,
+				07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		07C6B19F263623A200774C08 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */,
+				07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,8 +455,10 @@
 				079F62EF26359A4A0029A2C5 /* Schedule.swift in Sources */,
 				079F62CE263585F20029A2C5 /* Fonts.swift in Sources */,
 				079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */,
+				07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */,
 				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
 				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
+				07FB74AE263627AE00900CE9 /* Image.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
@@ -431,6 +466,7 @@
 				079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
 				07A2A7A42634703500CC7B95 /* CardView.swift in Sources */,
+				07FB74B82636287E00900CE9 /* Photo.swift in Sources */,
 				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
 				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,

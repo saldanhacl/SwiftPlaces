@@ -7,33 +7,80 @@
 
 import Foundation
 
+struct Header {
+    let field: String
+    let value: String
+}
+
 class APIService {
     
-  private let baseURL: String = "https://hotmart-mobile-app.herokuapp.com/"
-
-  func fetch<T: Decodable>(_ endpoint: String, completion: @escaping (Result<T, Error>) -> Void) {
+    enum Service {
+        case locations
+        case photos
+    }
     
-    let urlString = baseURL + endpoint
-    guard let url = URL(string: urlString) else { preconditionFailure("Invalid URL") }
-    let urlRequest = URLRequest(url: url)
+    init(_ service: Service) {
+        self.service = service
+    }
     
-    URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-      do {
-        if let error = error {
-          completion(.failure(error))
-          return
+    private var service: Service
+    
+    private var baseURL: String {
+        get {
+            switch self.service {
+            case .locations:
+                return "https://hotmart-mobile-app.herokuapp.com/"
+            case .photos:
+                return "https://api.pexels.com/v1/"
+            }
         }
-
-        guard let data = data else {
-          preconditionFailure("No error was received but we also don't have data...")
+    }
+    
+    private var headers: [Header]? {
+        get {
+            switch self.service {
+            case .locations:
+                return nil
+            case .photos:
+                return [Header(field: "Authorization", value: "563492ad6f9170000100000159bf2ca00681466c94cf1f4cf5a7f0e2")]
+            }
         }
-
-        let decodedObject = try JSONDecoder().decode(T.self, from: data)
-
-        completion(.success(decodedObject))
-      } catch {
-        completion(.failure(error))
-      }
-    }.resume()
-  }
+    }
+    
+    func fetch<T: Decodable>(_ endpoint: String, completion: @escaping (Result<T, Error>) -> Void) {
+        
+        let urlString = baseURL + endpoint
+        guard let url = URL(string: urlString) else { preconditionFailure("Invalid URL") }
+        let urlRequest = addHeaders(URLRequest(url: url))
+        
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            do {
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+                guard let data = data else {
+                    preconditionFailure("No error was received but we also don't have data...")
+                }
+                
+                let decodedObject = try JSONDecoder().decode(T.self, from: data)
+                
+                completion(.success(decodedObject))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
+    
+    
+    
+    private func addHeaders(_ request: URLRequest) -> URLRequest {
+        guard let headers = headers else { return request }
+        var requestWithHeaders = request
+        for header in headers {
+            requestWithHeaders.setValue(header.value, forHTTPHeaderField: header.field)
+        }
+        return requestWithHeaders
+    }
 }

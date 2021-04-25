@@ -7,11 +7,8 @@
 
 import Foundation
 
-
-// MARK: - Schedule
 struct Schedule: Codable {
-    let monday, tuesday, wednesday, thursday: Day
-    let friday, saturday, sunday: Day
+    let sunday, wednesday, thursday, friday, saturday: Day?
 }
 
 // MARK: - Day

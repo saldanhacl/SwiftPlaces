@@ -16,13 +16,22 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var reviewScoreLabel: Number!
     
-    func setupCell(image: String, place: Place) {
-        let colors = UIColor.getImagePlaceholderColors()
-        let placeHolderColor = colors[Int.random(in: 0 ..< colors.count)]
+    func setupCell(placeHolderColor: UIColor, image: String, place: Place) {
         placeImageView.backgroundColor = placeHolderColor
+        
+        if let imageUrl = place.imageUrl, let url = URL(string: imageUrl) {
+            placeImageView.loadImage(at: url)
+        }
         
         self.titleLabel.text = place.name
         self.subtitleLabel.text = place.type
         self.reviewScoreLabel.text = String(place.review)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        placeImageView.image = nil
+        placeImageView.cancelImageLoad()
     }
 }

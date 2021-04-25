@@ -13,7 +13,7 @@ protocol PlacesServiceProtocol: class {
 }
 
 class PlacesService: PlacesServiceProtocol {
-    private let apiService = APIService()
+    private let apiService = APIService(.locations)
     
     func getPlaces(completion: @escaping (Result<PlaceListResponse, Error>) -> Void){
         let endpoint = "locations"

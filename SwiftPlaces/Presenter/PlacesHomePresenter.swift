@@ -14,12 +14,14 @@ protocol PlacesHomePresenterDelegate: class {
 class PlacesHomePresenter {
     weak var delegate: PlacesHomePresenterDelegate?
     private let placesService = PlacesService()
+    private let photosService = PhotosService()
     weak var view: PlacesHomeViewController?
 
     
     init(delegate: PlacesHomePresenterDelegate) {
         self.delegate = delegate
         self.getPlaces()
+        self.getPhotos()
     }
     
     private func getPlaces() {
@@ -27,10 +29,10 @@ class PlacesHomePresenter {
             do {
                 let placesList = try result.get()
                 DispatchQueue.main.async {
-                    self.view?.updateData(placesList.listLocations)
+                    self.view?.addPlaces(placesList.listLocations)
                 }
             } catch {
-                print("error")
+                print(error)
             }
         }
     }
@@ -42,6 +44,19 @@ class PlacesHomePresenter {
         }
     }
     
+    func getPhotos() {
+        photosService.getPhotos(of: "restaurant") { result in
+            do {
+                let photosResponse = try result.get()
+                DispatchQueue.main.async {
+                    self.view?.populateWithPhotos(photosResponse.photos)
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     func getPlaceDetail(_ place: Place, completion: @escaping(PlaceDetail) -> Void) {
         placesService.getPlaceDetail(id: place.id) { result in
             do {
@@ -50,7 +65,7 @@ class PlacesHomePresenter {
                     completion(placeDetail)
                 }
             } catch {
-                print("error")
+                print(error)
             }
         }
     }

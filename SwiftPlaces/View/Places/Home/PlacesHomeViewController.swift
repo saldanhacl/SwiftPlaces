@@ -12,17 +12,41 @@ class PlacesHomeViewController: UIViewController {
     var presenter: PlacesHomePresenter?
     
     @IBOutlet weak var placesCardsCollectionView: UICollectionView!
-    var places: [Place] = [Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking")]
-    
+
+    var places: [Place] = []
+    var photos: [Photo] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollectionView()
         self.presenter?.view = self
     }
     
-    func updateData(_ places: [Place]) {
+    func addPlaces(_ places: [Place]) {
         self.places = places
+        uploadDataWithPhotos()
+    }
+    
+    func populateWithPhotos(_ photos: [Photo]) {
+        self.photos = photos
+        uploadDataWithPhotos()
+    }
+    
+    func uploadDataWithPhotos() {
+        self.addPhotoToPlaces()
         self.placesCardsCollectionView.reloadData()
+    }
+    
+    private func addPhotoToPlaces() {
+        guard places.count > 0 else { return }
+        var placesWithImage: [Place] = []
+        for (index, var place) in places.enumerated() {
+            if index < photos.count {
+                place.imageUrl = photos[index].src?.medium
+                placesWithImage.append(place)
+            }
+        }
+        self.places = placesWithImage
     }
     
     private func setupCollectionView() {
@@ -55,8 +79,11 @@ extension PlacesHomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceCardCollectionViewCell.reusableIdentifier, for: indexPath) as? PlaceCardCollectionViewCell else { return UICollectionViewCell() }
+                
+        let colors = UIColor.getImagePlaceholderColors()
+        let placeHolderColor = colors[Int.random(in: 0 ..< colors.count)]
         
-        cell.setupCell(image: "", place: places[indexPath.row])
+        cell.setupCell(placeHolderColor: placeHolderColor, image: "", place: places[indexPath.row])
         return cell
     }
 }
@@ -71,9 +98,9 @@ extension PlacesHomeViewController: UICollectionViewDelegateFlowLayout {
         
         let cellWidth = (screenWidth - (numberOfItemsPerRow * spacingBetweenCells)) / numberOfItemsPerRow
         
-        let cellHeight = CGFloat.random(in: 136 ..< 214)
+        // let cellHeight = CGFloat.random(in: 136 ..< 214)
         
-        return CGSize(width: cellWidth, height: cellHeight)
+        return CGSize(width: cellWidth, height: 216)
     }
 }
 
