@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
+		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
+		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
+		079F62D7263588450029A2C5 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D52635883A0029A2C5 /* OpenSans-SemiBold.ttf */; };
+		079F62D8263588450029A2C5 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */; };
+		079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62DF26358A0A0029A2C5 /* CustomLabel.swift */; };
+		079F62E526358E0E0029A2C5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62E426358E0E0029A2C5 /* Place.swift */; };
 		07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A719263449B700CC7B95 /* AppDelegate.swift */; };
 		07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A722263449B800CC7B95 /* Assets.xcassets */; };
 		07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */; };
@@ -45,6 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		079F62D52635883A0029A2C5 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		079F62DF26358A0A0029A2C5 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		079F62E426358E0E0029A2C5 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		07A2A716263449B700CC7B95 /* SwiftPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A2A719263449B700CC7B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07A2A722263449B800CC7B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079F62D2263588210029A2C5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */,
+				079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */,
+				079F62D52635883A0029A2C5 /* OpenSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		07A2A70D263449B700CC7B95 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +185,7 @@
 		07A2A75026344ADE00CC7B95 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				079F62D2263588210029A2C5 /* Fonts */,
 				07A2A722263449B800CC7B95 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -188,6 +213,7 @@
 		07A2A75326344AF900CC7B95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				079F62E426358E0E0029A2C5 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +260,9 @@
 			children = (
 				07A2A7A32634703500CC7B95 /* CardView.swift */,
 				07A2A7AB2634816B00CC7B95 /* Colors.swift */,
+				079F62C8263585AA0029A2C5 /* Labels.swift */,
+				079F62CD263585F20029A2C5 /* Fonts.swift */,
+				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -343,8 +372,11 @@
 			files = (
 				07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */,
 				07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */,
+				079F62D8263588450029A2C5 /* OpenSans-Light.ttf in Resources */,
+				079F62D7263588450029A2C5 /* OpenSans-SemiBold.ttf in Resources */,
 				07A2A767263450FD00CC7B95 /* PlacesHomeViewController.xib in Resources */,
 				07A2A7712634511600CC7B95 /* PlacesDetailsViewController.xib in Resources */,
+				079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */,
 				07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,10 +404,14 @@
 			files = (
 				07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */,
 				07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */,
+				079F62CE263585F20029A2C5 /* Fonts.swift in Sources */,
+				079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
+				079F62C9263585AA0029A2C5 /* Labels.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
 				07A2A7A42634703500CC7B95 /* CardView.swift in Sources */,
+				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
 				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,
 				07A2A7892634583C00CC7B95 /* PlacesFactory.swift in Sources */,

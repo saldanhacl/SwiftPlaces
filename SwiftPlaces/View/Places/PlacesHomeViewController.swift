@@ -12,7 +12,7 @@ class PlacesHomeViewController: UIViewController {
     var presenter: PlacesHomePresenter?
     
     @IBOutlet weak var placesCardsCollectionView: UICollectionView!
-    let places = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    let places: [Place] = [Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ extension PlacesHomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceCardCollectionViewCell.reusableIdentifier, for: indexPath) as? PlaceCardCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.setupCell(placeName: places[indexPath.row])
+        cell.setupCell(image: "", place: places[indexPath.row])
         return cell
     }
 }
