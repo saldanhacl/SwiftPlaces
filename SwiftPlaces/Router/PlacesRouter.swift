@@ -9,7 +9,7 @@ import UIKit
 
 protocol PlacesRouterProtocol: RouterProtocol {
     var navigationController: UINavigationController? { get }
-    func gotoPlaceDetail()
+    func gotoPlaceDetail(_ placeDetail: PlaceDetailViewModel)
 }
 
 class PlacesRouter: PlacesRouterProtocol {
@@ -24,8 +24,8 @@ class PlacesRouter: PlacesRouterProtocol {
         navigationController?.pushViewController(homeViewController, animated: true)
     }
 
-    func gotoPlaceDetail() {
-        let detailViewController = PlacesFactory.makePlacesDetail(delegate: self)
+    func gotoPlaceDetail(_ placeDetail: PlaceDetailViewModel) {
+        let detailViewController = PlacesFactory.makePlacesDetail(placeDetail, delegate: self)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
@@ -33,8 +33,8 @@ class PlacesRouter: PlacesRouterProtocol {
 
 // MARK: PlacesHomePresenterDelegate
 extension PlacesRouter: PlacesHomePresenterDelegate {
-    func routeToDetails() {
-        self.gotoPlaceDetail()
+    func routeToDetails(_ placeDetail: PlaceDetailViewModel) {
+        self.gotoPlaceDetail(placeDetail)
     }
 }
 

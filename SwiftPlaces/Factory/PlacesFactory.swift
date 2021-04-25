@@ -15,10 +15,11 @@ struct PlacesFactory {
         return viewController
     }
     
-    static func  makePlacesDetail(delegate: PlacesDetailsPresenterDelegate) -> PlacesDetailsViewController {
+    static func  makePlacesDetail(_ placeDetail: PlaceDetailViewModel, delegate: PlacesDetailsPresenterDelegate) -> PlacesDetailsViewController {
         let viewController = PlacesDetailsViewController()
         let presenter = PlacesDetailsPresenter(delegate: delegate)
         viewController.presenter = presenter
+        viewController.placeDetail = placeDetail
         return viewController
     }
 }

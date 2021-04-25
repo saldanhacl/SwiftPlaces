@@ -34,7 +34,7 @@ class PlacesHomeViewController: UIViewController {
 
 extension PlacesHomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.presenter?.didGoToDetails()
+        self.presenter?.didGoToDetails(of: places[indexPath.row])
     }
 }
 
