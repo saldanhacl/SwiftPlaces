@@ -12,11 +12,17 @@ class PlacesHomeViewController: UIViewController {
     var presenter: PlacesHomePresenter?
     
     @IBOutlet weak var placesCardsCollectionView: UICollectionView!
-    let places: [Place] = [Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking")]
+    var places: [Place] = [Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking"), Place(id: 0, name: "Café Escritório", review: 3.8, type: "Coworking")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollectionView()
+        self.presenter?.view = self
+    }
+    
+    func updateData(_ places: [Place]) {
+        self.places = places
+        self.placesCardsCollectionView.reloadData()
     }
     
     private func setupCollectionView() {

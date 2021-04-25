@@ -17,6 +17,8 @@
 		079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62E926359A410029A2C5 /* PlaceDetail.swift */; };
 		079F62EF26359A4A0029A2C5 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62EE26359A4A0029A2C5 /* Schedule.swift */; };
 		079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62F326359B510029A2C5 /* PlaceDetailViewModel.swift */; };
+		079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62F82635AC210029A2C5 /* PlacesService.swift */; };
+		079F62FE2635AD930029A2C5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62FD2635AD930029A2C5 /* APIService.swift */; };
 		07A2A71A263449B700CC7B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A719263449B700CC7B95 /* AppDelegate.swift */; };
 		07A2A723263449B800CC7B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A722263449B800CC7B95 /* Assets.xcassets */; };
 		07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */; };
@@ -65,6 +67,8 @@
 		079F62E926359A410029A2C5 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
 		079F62EE26359A4A0029A2C5 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		079F62F326359B510029A2C5 /* PlaceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewModel.swift; sourceTree = "<group>"; };
+		079F62F82635AC210029A2C5 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		079F62FD2635AD930029A2C5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		07A2A716263449B700CC7B95 /* SwiftPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A2A719263449B700CC7B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07A2A722263449B800CC7B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 		07A2A75426344AFE00CC7B95 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				079F62F82635AC210029A2C5 /* PlacesService.swift */,
+				079F62FD2635AD930029A2C5 /* APIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -416,6 +422,8 @@
 				079F62EF26359A4A0029A2C5 /* Schedule.swift in Sources */,
 				079F62CE263585F20029A2C5 /* Fonts.swift in Sources */,
 				079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */,
+				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
+				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,

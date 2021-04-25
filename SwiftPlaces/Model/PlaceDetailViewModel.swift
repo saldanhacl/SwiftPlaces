@@ -28,6 +28,6 @@ class PlaceDetailViewModel {
         self.about = placeDetail.about
         self.timeSchedule = "seg a sex: 7h às 23h\nsáb e dom: 8h às 20h"
         self.phoneNumber = placeDetail.phone
-        self.location = placeDetail.address
+        self.location = placeDetail.adress
     }
 }
