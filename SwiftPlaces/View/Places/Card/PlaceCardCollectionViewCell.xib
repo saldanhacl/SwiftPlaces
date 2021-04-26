@@ -17,71 +17,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="339" height="778"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-hU-qdF" userLabel="Content View" customClass="CardView" customModule="SwiftPlaces" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-hU-qdF" customClass="ShadowView" customModule="SwiftPlaces" customModuleProvider="target">
                         <rect key="frame" x="4" y="4" width="331" height="770"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COB-5r-fUE" userLabel="Card View">
-                                <rect key="frame" x="0.0" y="0.0" width="331" height="223"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJl-JZ-zRS" userLabel="Card View" customClass="RoundedView" customModule="SwiftPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="331" height="770"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-5L-cB8">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="223"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="hqA-5L-cB8" firstAttribute="top" secondItem="COB-5r-fUE" secondAttribute="top" id="4zy-rc-z3P"/>
-                                    <constraint firstItem="hqA-5L-cB8" firstAttribute="leading" secondItem="COB-5r-fUE" secondAttribute="leading" id="JbL-Kj-sth"/>
-                                    <constraint firstAttribute="trailing" secondItem="hqA-5L-cB8" secondAttribute="trailing" id="Q01-CD-zlA"/>
-                                    <constraint firstAttribute="bottom" secondItem="hqA-5L-cB8" secondAttribute="bottom" id="hCr-Lf-MBr"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pW0-UU-zn1">
-                                <rect key="frame" x="8" y="231" width="315" height="523"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="let-ea-Rbr">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COB-5r-fUE" userLabel="Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="231"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-Nx-Mev" customClass="Title" customModule="SwiftPlaces" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-5L-cB8">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="231"/>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="4Z9-Nx-Mev" firstAttribute="leading" secondItem="let-ea-Rbr" secondAttribute="leading" id="H2Y-BQ-2em"/>
-                                            <constraint firstAttribute="bottom" secondItem="4Z9-Nx-Mev" secondAttribute="bottom" id="dfc-Ff-kxP"/>
-                                            <constraint firstItem="4Z9-Nx-Mev" firstAttribute="top" secondItem="let-ea-Rbr" secondAttribute="top" id="gg4-o7-G77"/>
-                                            <constraint firstAttribute="trailing" secondItem="4Z9-Nx-Mev" secondAttribute="trailing" id="sQq-ms-rk4"/>
+                                            <constraint firstItem="hqA-5L-cB8" firstAttribute="top" secondItem="COB-5r-fUE" secondAttribute="top" id="4zy-rc-z3P"/>
+                                            <constraint firstItem="hqA-5L-cB8" firstAttribute="leading" secondItem="COB-5r-fUE" secondAttribute="leading" id="JbL-Kj-sth"/>
+                                            <constraint firstAttribute="trailing" secondItem="hqA-5L-cB8" secondAttribute="trailing" id="Q01-CD-zlA"/>
+                                            <constraint firstAttribute="bottom" secondItem="hqA-5L-cB8" secondAttribute="bottom" id="hCr-Lf-MBr"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-9V-ZXR">
-                                        <rect key="frame" x="0.0" y="54" width="315" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pW0-UU-zn1">
+                                        <rect key="frame" x="8" y="239" width="315" height="523"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yE-5h-zqY" customClass="Subtitle" customModule="SwiftPlaces" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="let-ea-Rbr">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="4yE-5h-zqY" firstAttribute="leading" secondItem="MAP-9V-ZXR" secondAttribute="leading" id="ZZ2-Xl-NfC"/>
-                                            <constraint firstAttribute="trailing" secondItem="4yE-5h-zqY" secondAttribute="trailing" id="bQj-md-msf"/>
-                                            <constraint firstItem="4yE-5h-zqY" firstAttribute="top" secondItem="MAP-9V-ZXR" secondAttribute="top" id="kve-PU-hhw"/>
-                                            <constraint firstAttribute="bottom" secondItem="4yE-5h-zqY" secondAttribute="bottom" id="o7r-Xy-DnO"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-ao-As1">
-                                        <rect key="frame" x="0.0" y="108" width="315" height="415"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-Gh-VVJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="415"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sm-Uw-TP1" customClass="Number" customModule="SwiftPlaces" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="415"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-Nx-Mev" customClass="Title" customModule="SwiftPlaces" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="4Z9-Nx-Mev" firstAttribute="leading" secondItem="let-ea-Rbr" secondAttribute="leading" id="H2Y-BQ-2em"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Z9-Nx-Mev" secondAttribute="bottom" id="dfc-Ff-kxP"/>
+                                                    <constraint firstItem="4Z9-Nx-Mev" firstAttribute="top" secondItem="let-ea-Rbr" secondAttribute="top" id="gg4-o7-G77"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4Z9-Nx-Mev" secondAttribute="trailing" id="sQq-ms-rk4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-9V-ZXR">
+                                                <rect key="frame" x="0.0" y="54" width="315" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yE-5h-zqY" customClass="Subtitle" customModule="SwiftPlaces" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -89,31 +71,63 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="9sm-Uw-TP1" secondAttribute="trailing" id="NKs-tl-5Mn"/>
-                                                    <constraint firstItem="9sm-Uw-TP1" firstAttribute="top" secondItem="jqe-Gh-VVJ" secondAttribute="top" id="OBm-h7-5q3"/>
-                                                    <constraint firstItem="9sm-Uw-TP1" firstAttribute="leading" secondItem="jqe-Gh-VVJ" secondAttribute="leading" id="R2L-qc-IRD"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9sm-Uw-TP1" secondAttribute="bottom" id="gK9-mA-we7"/>
+                                                    <constraint firstItem="4yE-5h-zqY" firstAttribute="leading" secondItem="MAP-9V-ZXR" secondAttribute="leading" id="ZZ2-Xl-NfC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4yE-5h-zqY" secondAttribute="trailing" id="bQj-md-msf"/>
+                                                    <constraint firstItem="4yE-5h-zqY" firstAttribute="top" secondItem="MAP-9V-ZXR" secondAttribute="top" id="kve-PU-hhw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4yE-5h-zqY" secondAttribute="bottom" id="o7r-Xy-DnO"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-ao-As1">
+                                                <rect key="frame" x="0.0" y="108" width="315" height="415"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-Gh-VVJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="415"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sm-Uw-TP1" customClass="Number" customModule="SwiftPlaces" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="315" height="415"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="9sm-Uw-TP1" secondAttribute="trailing" id="NKs-tl-5Mn"/>
+                                                            <constraint firstItem="9sm-Uw-TP1" firstAttribute="top" secondItem="jqe-Gh-VVJ" secondAttribute="top" id="OBm-h7-5q3"/>
+                                                            <constraint firstItem="9sm-Uw-TP1" firstAttribute="leading" secondItem="jqe-Gh-VVJ" secondAttribute="leading" id="R2L-qc-IRD"/>
+                                                            <constraint firstAttribute="bottom" secondItem="9sm-Uw-TP1" secondAttribute="bottom" id="gK9-mA-we7"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pW0-UU-zn1" firstAttribute="leading" secondItem="QJl-JZ-zRS" secondAttribute="leading" constant="8" id="D3o-B5-hjj"/>
+                                    <constraint firstAttribute="trailing" secondItem="pW0-UU-zn1" secondAttribute="trailing" constant="8" id="DLd-3M-Euz"/>
+                                    <constraint firstAttribute="trailing" secondItem="COB-5r-fUE" secondAttribute="trailing" id="KXu-oP-cRG"/>
+                                    <constraint firstItem="pW0-UU-zn1" firstAttribute="top" secondItem="COB-5r-fUE" secondAttribute="bottom" constant="8" id="SZX-Sr-7Qg"/>
+                                    <constraint firstAttribute="bottom" secondItem="pW0-UU-zn1" secondAttribute="bottom" constant="8" id="UrO-uA-lS9"/>
+                                    <constraint firstItem="COB-5r-fUE" firstAttribute="top" secondItem="QJl-JZ-zRS" secondAttribute="top" id="XOU-1e-of1"/>
+                                    <constraint firstItem="COB-5r-fUE" firstAttribute="leading" secondItem="QJl-JZ-zRS" secondAttribute="leading" id="uEu-pL-LPh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="COB-5r-fUE" secondAttribute="trailing" id="7KS-3y-BDa"/>
-                            <constraint firstItem="COB-5r-fUE" firstAttribute="top" secondItem="3Qg-hU-qdF" secondAttribute="top" id="Cnr-XQ-0R7"/>
-                            <constraint firstItem="COB-5r-fUE" firstAttribute="leading" secondItem="3Qg-hU-qdF" secondAttribute="leading" id="GP5-5e-YXu"/>
-                            <constraint firstAttribute="trailing" secondItem="pW0-UU-zn1" secondAttribute="trailing" constant="8" id="ZHo-fr-Ije"/>
-                            <constraint firstAttribute="bottom" secondItem="pW0-UU-zn1" secondAttribute="bottom" constant="16" id="cjg-p6-4PU"/>
-                            <constraint firstItem="pW0-UU-zn1" firstAttribute="top" secondItem="COB-5r-fUE" secondAttribute="bottom" constant="8" id="ezy-DK-o0x"/>
-                            <constraint firstItem="pW0-UU-zn1" firstAttribute="leading" secondItem="3Qg-hU-qdF" secondAttribute="leading" constant="8" id="mq1-W8-KKf"/>
+                            <constraint firstAttribute="trailing" secondItem="QJl-JZ-zRS" secondAttribute="trailing" id="GLL-ho-Q5k"/>
+                            <constraint firstItem="QJl-JZ-zRS" firstAttribute="top" secondItem="3Qg-hU-qdF" secondAttribute="top" id="YC0-Kq-40T"/>
+                            <constraint firstItem="QJl-JZ-zRS" firstAttribute="leading" secondItem="3Qg-hU-qdF" secondAttribute="leading" id="fMN-OJ-wal"/>
+                            <constraint firstAttribute="bottom" secondItem="QJl-JZ-zRS" secondAttribute="bottom" id="sOr-S2-ALg"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="16"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                 <real key="value" value="2"/>
                             </userDefinedRuntimeAttribute>

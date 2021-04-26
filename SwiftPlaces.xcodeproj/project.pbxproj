@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072DE34B2637781200003438 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072DE34A2637781200003438 /* ShadowView.swift */; };
 		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
 		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
 		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072DE34A2637781200003438 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				079F62CD263585F20029A2C5 /* Fonts.swift */,
 				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
 				07FB74AD263627AE00900CE9 /* Image.swift */,
+				072DE34A2637781200003438 /* ShadowView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
+				072DE34B2637781200003438 /* ShadowView.swift in Sources */,
 				079F62C9263585AA0029A2C5 /* Labels.swift in Sources */,
 				079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
