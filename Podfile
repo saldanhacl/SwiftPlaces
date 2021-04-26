@@ -6,6 +6,7 @@ target 'SwiftPlaces' do
   use_frameworks!
 
   pod 'Cosmos', '~> 23.0'
+  pod 'SDWebImage', '~> 5.0'
 
   target 'SwiftPlacesTests' do
     inherit! :search_paths

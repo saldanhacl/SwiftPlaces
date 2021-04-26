@@ -16,8 +16,10 @@ class PlaceDetailViewModel {
     var timeSchedule: String!
     var phoneNumber: String!
     var location: String!
+    var imageUrl: String?
 
-    init(placeDetail: PlaceDetail) {
+    init(imageUrl: String?, placeDetail: PlaceDetail) {
+        self.imageUrl = imageUrl
         self.placeDetail = placeDetail
         self.prepare()
     }

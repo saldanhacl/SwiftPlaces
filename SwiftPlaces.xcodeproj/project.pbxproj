@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,9 +37,8 @@
 		07A2A7912634598100CC7B95 /* PlacesDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */; };
 		07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */; };
 		07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */; };
-		07A2A7A42634703500CC7B95 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7A32634703500CC7B95 /* CardView.swift */; };
+		07A2A7A42634703500CC7B95 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7A32634703500CC7B95 /* RoundedView.swift */; };
 		07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A2A7AB2634816B00CC7B95 /* Colors.swift */; };
-		07FB74AE263627AE00900CE9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74AD263627AE00900CE9 /* Image.swift */; };
 		07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74B2263627EE00900CE9 /* PhotosService.swift */; };
 		07FB74B82636287E00900CE9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB74B72636287E00900CE9 /* Photo.swift */; };
 		25B51738D51050EA5CAFAE3B /* Pods_SwiftPlaces_SwiftPlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F1A0DA7FB9C5EF4478E14B /* Pods_SwiftPlaces_SwiftPlacesUITests.framework */; };
@@ -99,9 +98,8 @@
 		07A2A7902634598100CC7B95 /* PlacesDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsPresenter.swift; sourceTree = "<group>"; };
 		07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCardCollectionViewCell.xib; sourceTree = "<group>"; };
-		07A2A7A32634703500CC7B95 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		07A2A7A32634703500CC7B95 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		07A2A7AB2634816B00CC7B95 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		07FB74AD263627AE00900CE9 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		07FB74B2263627EE00900CE9 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		07FB74B72636287E00900CE9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0BFC41E162E740781AC45F58 /* Pods-SwiftPlacesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPlacesTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPlacesTests/Pods-SwiftPlacesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,12 +295,11 @@
 		07A2A7A22634701E00CC7B95 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				07A2A7A32634703500CC7B95 /* CardView.swift */,
+				07A2A7A32634703500CC7B95 /* RoundedView.swift */,
 				07A2A7AB2634816B00CC7B95 /* Colors.swift */,
 				079F62C8263585AA0029A2C5 /* Labels.swift */,
 				079F62CD263585F20029A2C5 /* Fonts.swift */,
 				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
-				07FB74AD263627AE00900CE9 /* Image.swift */,
 				072DE34A2637781200003438 /* ShadowView.swift */,
 			);
 			path = Elements;
@@ -355,7 +352,6 @@
 				0BFC41E162E740781AC45F58 /* Pods-SwiftPlacesTests.debug.xcconfig */,
 				A2E70ACE1ECA39DCFB7087E3 /* Pods-SwiftPlacesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -610,7 +606,6 @@
 				07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */,
 				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
 				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
-				07FB74AE263627AE00900CE9 /* Image.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
 				07A2A766263450FD00CC7B95 /* PlacesHomeViewController.swift in Sources */,
@@ -618,7 +613,7 @@
 				079F62C9263585AA0029A2C5 /* Labels.swift in Sources */,
 				079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
-				07A2A7A42634703500CC7B95 /* CardView.swift in Sources */,
+				07A2A7A42634703500CC7B95 /* RoundedView.swift in Sources */,
 				07FB74B82636287E00900CE9 /* Photo.swift in Sources */,
 				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,

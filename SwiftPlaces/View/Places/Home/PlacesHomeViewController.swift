@@ -12,14 +12,18 @@ class PlacesHomeViewController: UIViewController {
     var presenter: PlacesHomePresenter?
     
     @IBOutlet weak var placesCardsCollectionView: UICollectionView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var places: [Place] = []
     var photos: [Photo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicator?.hidesWhenStopped = true
         self.setupCollectionView()
         self.presenter?.view = self
+        self.presenter?.getPlaces()
+        self.presenter?.getPhotos()
     }
     
     func addPlaces(_ places: [Place]) {
@@ -37,12 +41,21 @@ class PlacesHomeViewController: UIViewController {
         self.placesCardsCollectionView.reloadData()
     }
     
+    func startLoading() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        self.activityIndicator.stopAnimating()
+    }
+    
     private func addPhotoToPlaces() {
-        guard places.count > 0 else { return }
+        guard places.count > 0, photos.count > 0 else { return }
         var placesWithImage: [Place] = []
         for (index, var place) in places.enumerated() {
             if index < photos.count {
-                place.imageUrl = photos[index].src?.medium
+                place.cardImageUrl = photos[index].src?.medium
+                place.originalImageUrl = photos[index].src?.original
                 placesWithImage.append(place)
             }
         }
@@ -80,10 +93,7 @@ extension PlacesHomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceCardCollectionViewCell.reusableIdentifier, for: indexPath) as? PlaceCardCollectionViewCell else { return UICollectionViewCell() }
                 
-        let colors = UIColor.getImagePlaceholderColors()
-        let placeHolderColor = colors[Int.random(in: 0 ..< colors.count)]
-        
-        cell.setupCell(placeHolderColor: placeHolderColor, image: "", place: places[indexPath.row])
+        cell.setupCell(placeHolderColor: UIColor.getRandomPlaceholderColor(), image: "", place: places[indexPath.row])
         return cell
     }
 }

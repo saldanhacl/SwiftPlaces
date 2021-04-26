@@ -17,18 +17,18 @@ class PlacesHomePresenter {
     private let photosService = PhotosService()
     weak var view: PlacesHomeViewController?
 
-    
     init(delegate: PlacesHomePresenterDelegate) {
         self.delegate = delegate
-        self.getPlaces()
-        self.getPhotos()
+
     }
     
-    private func getPlaces() {
+    func getPlaces() {
+        self.view?.startLoading()
         placesService.getPlaces { result in
             do {
                 let placesList = try result.get()
                 DispatchQueue.main.async {
+                    self.view?.stopLoading()
                     self.view?.addPlaces(placesList.listLocations)
                 }
             } catch {
@@ -39,7 +39,7 @@ class PlacesHomePresenter {
     
     func didGoToDetails(of place: Place) {
         getPlaceDetail(place) { result in
-            let viewModel = PlaceDetailViewModel(placeDetail: result)
+            let viewModel = PlaceDetailViewModel(imageUrl: place.originalImageUrl, placeDetail: result)
             self.delegate?.routeToDetails(viewModel)
         }
     }

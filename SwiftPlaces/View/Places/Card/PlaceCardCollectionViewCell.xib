@@ -26,7 +26,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COB-5r-fUE" userLabel="Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="223"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-5L-cB8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-5L-cB8">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="223"/>
                                             </imageView>
                                         </subviews>
@@ -81,7 +81,7 @@
                                                 <rect key="frame" x="0.0" y="108" width="315" height="415"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-0R-AOR" customClass="CosmosView" customModule="Cosmos">
-                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="415"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="415"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="starOn"/>
@@ -92,10 +92,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-Gh-VVJ">
-                                                        <rect key="frame" x="180" y="0.0" width="135" height="415"/>
+                                                        <rect key="frame" x="101.5" y="0.0" width="213.5" height="415"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sm-Uw-TP1" customClass="Number" customModule="SwiftPlaces" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="415"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="213.5" height="415"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>

@@ -11,7 +11,13 @@ extension UIColor {
     
     // MARK: Functions
     
-    public class func getImagePlaceholderColors() -> [UIColor] {
+    public class func getRandomPlaceholderColor() -> UIColor {
+        let colors = UIColor.getImagePlaceholderColors()
+        let placeHolderColor = colors[Int.random(in: 0 ..< colors.count)]
+        return placeHolderColor
+    }
+    
+    private static func getImagePlaceholderColors() -> [UIColor] {
         return [duckEggBlue, lightPink, creme]
     }
     

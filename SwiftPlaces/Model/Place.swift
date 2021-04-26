@@ -16,5 +16,6 @@ struct Place: Codable {
     let name: String
     let review: Double
     let type: String
-    var imageUrl: String?
+    var cardImageUrl: String?
+    var originalImageUrl: String?
 }

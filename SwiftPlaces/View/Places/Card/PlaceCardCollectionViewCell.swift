@@ -7,6 +7,7 @@
 
 import UIKit
 import Cosmos
+import SDWebImage
 
 class PlaceCardCollectionViewCell: UICollectionViewCell {
     
@@ -21,8 +22,8 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
     func setupCell(placeHolderColor: UIColor, image: String, place: Place) {
         placeImageView.backgroundColor = placeHolderColor
         
-        if let imageUrl = place.imageUrl, let url = URL(string: imageUrl) {
-            placeImageView.loadImage(at: url)
+        if let imageUrl = place.cardImageUrl, let url = URL(string: imageUrl) {
+            placeImageView.sd_setImage(with: url)
         }
         
         cosmosView.rating = place.review
@@ -36,6 +37,5 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         
         placeImageView.image = nil
-        placeImageView.cancelImageLoad()
     }
 }
