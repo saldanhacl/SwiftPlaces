@@ -12,6 +12,7 @@ struct PlacesFactory {
         let viewController = PlacesHomeViewController()
         let presenter = PlacesHomePresenter(delegate: delegate)
         viewController.presenter = presenter
+        viewController.title = "Home"
         return viewController
     }
     

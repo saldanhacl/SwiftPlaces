@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class PlaceCardCollectionViewCell: UICollectionViewCell {
     
@@ -15,6 +16,7 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var reviewScoreLabel: Number!
+    @IBOutlet weak var cosmosView: CosmosView!
     
     func setupCell(placeHolderColor: UIColor, image: String, place: Place) {
         placeImageView.backgroundColor = placeHolderColor
@@ -22,6 +24,8 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
         if let imageUrl = place.imageUrl, let url = URL(string: imageUrl) {
             placeImageView.loadImage(at: url)
         }
+        
+        cosmosView.rating = place.review
         
         self.titleLabel.text = place.name
         self.subtitleLabel.text = place.type
