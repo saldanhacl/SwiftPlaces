@@ -25,7 +25,7 @@ class PlacesDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // self.navigationController?.setNavigationBarHidden(true, animated: false)
+         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
@@ -48,5 +48,8 @@ class PlacesDetailsViewController: UIViewController {
         self.scheduleTimeLabel.text = placeDetail?.timeSchedule
         self.phoneLabel.text = placeDetail?.phoneNumber
         self.locationLabel.text = placeDetail?.location
+    }
+    @IBAction func didTapToGoBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

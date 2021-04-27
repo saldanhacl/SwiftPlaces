@@ -44,10 +44,23 @@
                                                         <constraint firstAttribute="height" constant="200" id="Idl-eC-wCD"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfU-c6-QO5">
+                                                    <rect key="frame" x="20" y="24" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="2S8-Tw-2Sk"/>
+                                                        <constraint firstAttribute="width" constant="32" id="VNW-gF-RIp"/>
+                                                    </constraints>
+                                                    <state key="normal" image="arrowBack"/>
+                                                    <connections>
+                                                        <action selector="didTapToGoBack:" destination="-1" eventType="touchUpInside" id="s1t-sP-xB7"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
+                                                <constraint firstItem="UfU-c6-QO5" firstAttribute="leading" secondItem="hUN-sZ-HUp" secondAttribute="leading" constant="20" id="81p-ig-ni8"/>
                                                 <constraint firstItem="JfY-BV-Re5" firstAttribute="top" secondItem="hUN-sZ-HUp" secondAttribute="top" id="Cpl-7i-uid"/>
+                                                <constraint firstItem="UfU-c6-QO5" firstAttribute="top" secondItem="hUN-sZ-HUp" secondAttribute="top" constant="24" id="bt8-P3-yqV"/>
                                                 <constraint firstAttribute="bottom" secondItem="JfY-BV-Re5" secondAttribute="bottom" id="hIk-YK-0ng"/>
                                                 <constraint firstItem="JfY-BV-Re5" firstAttribute="leading" secondItem="hUN-sZ-HUp" secondAttribute="leading" id="lbg-3H-x6N"/>
                                                 <constraint firstAttribute="trailing" secondItem="JfY-BV-Re5" secondAttribute="trailing" id="vgy-Ms-e1N"/>
@@ -351,6 +364,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="arrowBack" width="18" height="18"/>
         <image name="phone" width="6.5" height="6.5"/>
         <image name="pin" width="6.5" height="6.5"/>
         <image name="time" width="6.5" height="6.5"/>
