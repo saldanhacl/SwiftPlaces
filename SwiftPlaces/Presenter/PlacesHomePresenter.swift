@@ -52,7 +52,7 @@ class PlacesHomePresenter {
                     self.view?.populateWithPhotos(photosResponse.photos)
                 }
             } catch {
-                print(error)
+                // Ignore and show the placeholder
             }
         }
     }
@@ -65,7 +65,7 @@ class PlacesHomePresenter {
                     completion(placeDetail)
                 }
             } catch {
-                print(error)
+                self.view?.showAlert(title: "Ops".localized(), message: "An error occurred while processing the data.".localized())
             }
         }
     }

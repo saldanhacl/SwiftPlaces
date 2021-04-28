@@ -31,6 +31,13 @@ class Body: CustomLabel {
     }
 }
 
+@IBDesignable
+class RatingWhite: CustomLabel {
+    override func initialize() {
+        self.textColor = UIColor.white
+        self.font = UIFont.openSans(size: 16)
+    }
+}
 
 @IBDesignable
 class Subtitle: CustomLabel {
@@ -40,12 +47,19 @@ class Subtitle: CustomLabel {
     }
 }
 
-
 @IBDesignable
 class Info: CustomLabel {
     override func initialize() {
         self.textColor = UIColor.black
         self.font = UIFont.openSansLight(size: 14)
+    }
+}
+
+@IBDesignable
+class RatingBlack: CustomLabel {
+    override func initialize() {
+        self.textColor = UIColor.black
+        self.font = UIFont.openSans(size: 14)
     }
 }
 
@@ -58,25 +72,9 @@ class SecondBody: CustomLabel {
 }
 
 @IBDesignable
-class RatingWhite: CustomLabel {
-    override func initialize() {
-        self.textColor = UIColor.white
-        self.font = UIFont.openSans(size: 14)
-    }
-}
-
-@IBDesignable
 class Footer: CustomLabel {
     override func initialize() {
         self.tintColor = UIColor.warmGrey
-        self.font = UIFont.openSans(size: 12)
-    }
-}
-
-@IBDesignable
-class RatingBlack: CustomLabel {
-    override func initialize() {
-        self.textColor = UIColor.black
         self.font = UIFont.openSans(size: 12)
     }
 }

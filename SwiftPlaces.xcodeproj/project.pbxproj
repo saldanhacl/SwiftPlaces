@@ -14,6 +14,7 @@
 		076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28F02638DF0D007F5FE7 /* Strings.swift */; };
 		076D28F42638DF5E007F5FE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076D28F62638DF5E007F5FE7 /* Localizable.strings */; };
 		076D28FB2638E210007F5FE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28FA2638E210007F5FE7 /* Config.swift */; };
+		076D28FD2638E319007F5FE7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28FC2638E319007F5FE7 /* Error.swift */; };
 		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
 		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
 		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
@@ -75,6 +76,7 @@
 		076D28F52638DF5E007F5FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		076D28F72638DF6B007F5FE7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		076D28FA2638E210007F5FE7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		076D28FC2638E319007F5FE7 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
 				072DE34A2637781200003438 /* ShadowView.swift */,
 				076D28F02638DF0D007F5FE7 /* Strings.swift */,
+				076D28FC2638E319007F5FE7 /* Error.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */,
 				07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */,
 				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
+				076D28FD2638E319007F5FE7 /* Error.swift in Sources */,
 				076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */,
 				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,

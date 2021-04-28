@@ -375,7 +375,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="rYj-bj-2ih" firstAttribute="leading" secondItem="Mwt-bq-etS" secondAttribute="leading" id="6Sq-s5-xsV"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rYj-bj-2ih" secondAttribute="bottom" constant="16" id="LF0-4p-JpO"/>
+                                <constraint firstAttribute="bottom" secondItem="rYj-bj-2ih" secondAttribute="bottom" constant="16" id="LF0-4p-JpO"/>
                                 <constraint firstAttribute="trailing" secondItem="rYj-bj-2ih" secondAttribute="trailing" id="N3V-Va-w5Q"/>
                                 <constraint firstItem="rYj-bj-2ih" firstAttribute="top" secondItem="Mwt-bq-etS" secondAttribute="top" id="v6i-3s-nf0"/>
                             </constraints>

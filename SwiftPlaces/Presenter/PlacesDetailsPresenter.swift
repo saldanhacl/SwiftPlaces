@@ -28,7 +28,7 @@ class PlacesDetailsPresenter {
                     self.view?.populateWithPhotos(photosResponse.photos)
                 }
             } catch {
-                print(error)
+                // Ignore
             }
         }
     }
