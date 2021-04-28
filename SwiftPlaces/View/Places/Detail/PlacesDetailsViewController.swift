@@ -17,10 +17,13 @@ class PlacesDetailsViewController: UIViewController {
     @IBOutlet weak var reviewView: UIView!
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var reviewScore: UILabel!
-    @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var scheduleTimeLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var aboutTextLabel: UILabel!
+    
+    @IBOutlet weak var photosLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
 
     @IBOutlet weak var detailPhotosCollectionView: UICollectionView!
     
@@ -29,10 +32,15 @@ class PlacesDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.setupLabels()
         self.presenter?.view = self
         self.presenter?.getPlaceDetailImages()
         self.setupCollectionView()
+    }
+    
+    private func setupLabels() {
+        self.aboutLabel.text = "About".localized()
+        self.photosLabel.text = "Photos".localized()
     }
     
     private func setupCollectionView() {
@@ -66,13 +74,10 @@ class PlacesDetailsViewController: UIViewController {
         }
         self.placeNameLabel.text = placeDetail?.name
         self.reviewScore.text = placeDetail?.review
-        self.aboutLabel.text = placeDetail?.about
+        self.aboutTextLabel.text = placeDetail?.about
         self.scheduleTimeLabel.text = placeDetail?.timeSchedule
         self.phoneLabel.text = placeDetail?.phoneNumber
         self.locationLabel.text = placeDetail?.location
-    }
-    @IBAction func didTapToGoBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
     }
 }
 

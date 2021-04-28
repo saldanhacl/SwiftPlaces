@@ -11,6 +11,9 @@
 		072DE34B2637781200003438 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072DE34A2637781200003438 /* ShadowView.swift */; };
 		076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */; };
 		076D28ED2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */; };
+		076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28F02638DF0D007F5FE7 /* Strings.swift */; };
+		076D28F42638DF5E007F5FE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076D28F62638DF5E007F5FE7 /* Localizable.strings */; };
+		076D28FB2638E210007F5FE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28FA2638E210007F5FE7 /* Config.swift */; };
 		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
 		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
 		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
@@ -68,6 +71,10 @@
 		072DE34A2637781200003438 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		076D28F02638DF0D007F5FE7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		076D28F52638DF5E007F5FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		076D28F72638DF6B007F5FE7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		076D28FA2638E210007F5FE7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -224,6 +231,8 @@
 			children = (
 				079F62D2263588210029A2C5 /* Fonts */,
 				07A2A722263449B800CC7B95 /* Assets.xcassets */,
+				076D28F62638DF5E007F5FE7 /* Localizable.strings */,
+				076D28FA2638E210007F5FE7 /* Config.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 				079F62CD263585F20029A2C5 /* Fonts.swift */,
 				079F62DF26358A0A0029A2C5 /* CustomLabel.swift */,
 				072DE34A2637781200003438 /* ShadowView.swift */,
+				076D28F02638DF0D007F5FE7 /* Strings.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -451,6 +461,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 07A2A70D263449B700CC7B95;
 			productRefGroup = 07A2A717263449B700CC7B95 /* Products */;
@@ -474,6 +485,7 @@
 				07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */,
 				079F62D8263588450029A2C5 /* OpenSans-Light.ttf in Resources */,
 				079F62D7263588450029A2C5 /* OpenSans-SemiBold.ttf in Resources */,
+				076D28F42638DF5E007F5FE7 /* Localizable.strings in Resources */,
 				07A2A767263450FD00CC7B95 /* PlacesHomeViewController.xib in Resources */,
 				07A2A7712634511600CC7B95 /* PlacesDetailsViewController.xib in Resources */,
 				079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */,
@@ -612,6 +624,7 @@
 				079F62E026358A0A0029A2C5 /* CustomLabel.swift in Sources */,
 				07FB74B3263627EE00900CE9 /* PhotosService.swift in Sources */,
 				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
+				076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */,
 				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
@@ -623,6 +636,7 @@
 				07A2A7A42634703500CC7B95 /* RoundedView.swift in Sources */,
 				076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */,
 				07FB74B82636287E00900CE9 /* Photo.swift in Sources */,
+				076D28FB2638E210007F5FE7 /* Config.swift in Sources */,
 				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
 				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,
@@ -664,6 +678,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		076D28F62638DF5E007F5FE7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076D28F52638DF5E007F5FE7 /* en */,
+				076D28F72638DF6B007F5FE7 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		07A2A724263449B800CC7B95 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -806,6 +829,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PHOTOS_API_KEY = 563492ad6f9170000100000159bf2ca00681466c94cf1f4cf5a7f0e2;
+				PHOTOS_API_URL = "https://api.pexels.com/v1/";
+				PLACES_API_URL = "https://hotmart-mobile-app.herokuapp.com/";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gof.SwiftPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -826,6 +852,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PHOTOS_API_KEY = 563492ad6f9170000100000159bf2ca00681466c94cf1f4cf5a7f0e2;
+				PHOTOS_API_URL = "https://api.pexels.com/v1/";
+				PLACES_API_URL = "https://hotmart-mobile-app.herokuapp.com/";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.gof.SwiftPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

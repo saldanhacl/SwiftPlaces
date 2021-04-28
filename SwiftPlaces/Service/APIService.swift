@@ -29,9 +29,9 @@ class APIService {
         get {
             switch self.service {
             case .locations:
-                return "https://hotmart-mobile-app.herokuapp.com/"
+                return Config.placesApiUrl
             case .photos:
-                return "https://api.pexels.com/v1/"
+                return Config.photosApiUrl
             }
         }
     }
@@ -42,7 +42,7 @@ class APIService {
             case .locations:
                 return nil
             case .photos:
-                return [Header(field: "Authorization", value: "563492ad6f9170000100000159bf2ca00681466c94cf1f4cf5a7f0e2")]
+                return [Header(field: "Authorization", value: Config.photosApiKey)]
             }
         }
     }

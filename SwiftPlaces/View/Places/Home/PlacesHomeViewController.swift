@@ -107,9 +107,7 @@ extension PlacesHomeViewController: UICollectionViewDelegateFlowLayout {
         let spacingBetweenCells: CGFloat = 24
         
         let cellWidth = (screenWidth - (numberOfItemsPerRow * spacingBetweenCells)) / numberOfItemsPerRow
-        
-        // let cellHeight = CGFloat.random(in: 136 ..< 214)
-        
+                
         return CGSize(width: cellWidth, height: 216)
     }
 }
