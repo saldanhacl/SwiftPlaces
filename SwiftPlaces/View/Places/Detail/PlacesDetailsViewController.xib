@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -84,7 +85,7 @@
                                                             <rect key="frame" x="0.0" y="102.5" width="382" height="122"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="WGd-Gl-jRq" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="252" height="122"/>
+                                                                    <rect key="frame" x="0.0" y="50" width="130" height="22"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="starOn"/>
@@ -96,10 +97,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXK-bG-b5q" userLabel="Review">
-                                                                    <rect key="frame" x="264" y="0.0" width="118" height="122"/>
+                                                                    <rect key="frame" x="142" y="0.0" width="240" height="122"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-HU-P6f" customClass="RatingWhite" customModule="SwiftPlaces" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="118" height="122"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="122"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -382,15 +383,13 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="top" secondItem="IR2-qU-wgu" secondAttribute="top" id="2vi-g6-3xJ"/>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="leading" secondItem="IR2-qU-wgu" secondAttribute="leading" id="7hO-ZQ-aMZ"/>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="trailing" secondItem="IR2-qU-wgu" secondAttribute="trailing" id="HlQ-L6-0hZ"/>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="height" secondItem="5Ah-9U-Okb" secondAttribute="height" id="uJo-rA-vWF"/>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="bottom" secondItem="IR2-qU-wgu" secondAttribute="bottom" id="xgZ-oS-zXA"/>
-                        <constraint firstItem="Mwt-bq-etS" firstAttribute="width" secondItem="5Ah-9U-Okb" secondAttribute="width" id="zdJ-Tw-SMO"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="top" secondItem="aJ9-r7-hje" secondAttribute="top" id="2vi-g6-3xJ"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="leading" secondItem="aJ9-r7-hje" secondAttribute="leading" id="7hO-ZQ-aMZ"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="trailing" secondItem="aJ9-r7-hje" secondAttribute="trailing" id="HlQ-L6-0hZ"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="height" secondItem="aJ9-r7-hje" secondAttribute="height" id="uJo-rA-vWF"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="bottom" secondItem="aJ9-r7-hje" secondAttribute="bottom" id="xgZ-oS-zXA"/>
+                        <constraint firstItem="Mwt-bq-etS" firstAttribute="width" secondItem="aJ9-r7-hje" secondAttribute="width" id="zdJ-Tw-SMO"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="IR2-qU-wgu"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="5Ah-9U-Okb"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -420,6 +419,9 @@
         </designable>
         <designable name="W9Z-kQ-VBo">
             <size key="intrinsicContentSize" width="45.5" height="20.5"/>
+        </designable>
+        <designable name="WGd-Gl-jRq">
+            <size key="intrinsicContentSize" width="130" height="22"/>
         </designable>
         <designable name="Zk3-2f-Yn3">
             <size key="intrinsicContentSize" width="41.5" height="20.5"/>
