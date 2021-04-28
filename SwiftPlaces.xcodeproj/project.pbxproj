@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		06683DFAE4F805F542FD5383 /* Pods_SwiftPlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE28E6141FEC14D6080D127 /* Pods_SwiftPlacesTests.framework */; };
 		072DE34B2637781200003438 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072DE34A2637781200003438 /* ShadowView.swift */; };
+		076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */; };
+		076D28ED2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */; };
 		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
 		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
 		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		072DE34A2637781200003438 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -277,7 +281,7 @@
 		07A2A763263450DB00CC7B95 /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				07C6B19F263623A200774C08 /* Card */,
+				07C6B19F263623A200774C08 /* Cells */,
 				07C6B19E2636239E00774C08 /* Detail */,
 				07C6B19D2636239A00774C08 /* Home */,
 			);
@@ -323,13 +327,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		07C6B19F263623A200774C08 /* Card */ = {
+		07C6B19F263623A200774C08 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */,
 				07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */,
+				076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */,
+				076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */,
 			);
-			path = Card;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		51156AEC4C9F871DCC1E06A3 /* Frameworks */ = {
@@ -464,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A726263449B800CC7B95 /* LaunchScreen.storyboard in Resources */,
+				076D28ED2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib in Resources */,
 				07A2A79E263466C700CC7B95 /* PlaceCardCollectionViewCell.xib in Resources */,
 				079F62D8263588450029A2C5 /* OpenSans-Light.ttf in Resources */,
 				079F62D7263588450029A2C5 /* OpenSans-SemiBold.ttf in Resources */,
@@ -614,6 +621,7 @@
 				079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
 				07A2A7A42634703500CC7B95 /* RoundedView.swift in Sources */,
+				076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */,
 				07FB74B82636287E00900CE9 /* Photo.swift in Sources */,
 				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
@@ -671,6 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -732,6 +741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

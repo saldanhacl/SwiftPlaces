@@ -21,11 +21,28 @@ class PlacesDetailsViewController: UIViewController {
     @IBOutlet weak var scheduleTimeLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+
+    @IBOutlet weak var detailPhotosCollectionView: UICollectionView!
+    
+    var detailPhotos: [Photo] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.presenter?.view = self
+        self.presenter?.getPlaceDetailImages()
+        self.setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        self.detailPhotosCollectionView.dataSource = self
+        self.detailPhotosCollectionView.delegate = self
+        registerCell()
+    }
+    
+    private func registerCell() {
+        self.detailPhotosCollectionView.register(UINib.init(nibName: "PlaceDetailPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PlaceDetailPhotoCollectionViewCell.reusableIdentifier)
     }
     
     override func viewDidLoad() {
@@ -36,6 +53,11 @@ class PlacesDetailsViewController: UIViewController {
         tabBarController?.hidesBottomBarWhenPushed = true
         self.reviewView.backgroundColor = UIColor.topaz
         self.setup()
+    }
+    
+    func populateWithPhotos(_ photos: [Photo]) {
+        self.detailPhotos = photos
+        self.detailPhotosCollectionView.reloadData()
     }
     
     func setup() {
@@ -51,5 +73,29 @@ class PlacesDetailsViewController: UIViewController {
     }
     @IBAction func didTapToGoBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension PlacesDetailsViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return detailPhotos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceDetailPhotoCollectionViewCell.reusableIdentifier, for: indexPath) as? PlaceDetailPhotoCollectionViewCell else { return UICollectionViewCell() }
+                
+        cell.setImage(from: detailPhotos[indexPath.row].src?.medium)
+        return cell
+    }
+}
+
+extension PlacesDetailsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 60, height: 60)
     }
 }

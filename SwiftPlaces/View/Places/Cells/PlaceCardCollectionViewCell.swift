@@ -16,7 +16,7 @@ class PlaceCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var reviewScoreLabel: Number!
+    @IBOutlet weak var reviewScoreLabel: UILabel!
     @IBOutlet weak var cosmosView: CosmosView!
     
     func setupCell(placeHolderColor: UIColor, image: String, place: Place) {

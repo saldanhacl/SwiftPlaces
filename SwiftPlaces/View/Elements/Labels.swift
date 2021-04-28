@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class PageTitle: CustomLabel {
+class PageTitleWhite: CustomLabel {
     override func initialize() {
         self.textColor = UIColor.white
         self.font = UIFont.openSansLight(size: 32)
@@ -58,6 +58,14 @@ class SecondBody: CustomLabel {
 }
 
 @IBDesignable
+class RatingWhite: CustomLabel {
+    override func initialize() {
+        self.textColor = UIColor.white
+        self.font = UIFont.openSans(size: 14)
+    }
+}
+
+@IBDesignable
 class Footer: CustomLabel {
     override func initialize() {
         self.tintColor = UIColor.warmGrey
@@ -66,7 +74,7 @@ class Footer: CustomLabel {
 }
 
 @IBDesignable
-class Number: CustomLabel {
+class RatingBlack: CustomLabel {
     override func initialize() {
         self.textColor = UIColor.black
         self.font = UIFont.openSans(size: 12)
