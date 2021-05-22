@@ -16,12 +16,14 @@ class PlacesService: PlacesServiceProtocol {
     private let apiService = APIService(.locations)
     
     func getPlaces(completion: @escaping (Result<PlaceListResponse, Error>) -> Void){
-        let endpoint = "locations"
-        apiService.fetch(endpoint, completion: completion)
+        // let endpoint = "locations"
+        // apiService.fetch(endpoint, completion: completion)
+        completion(.success(PlaceListResponse.mock()))
     }
     
     func getPlaceDetail(id: Int, completion: @escaping (Result<PlaceDetail, Error>) -> Void) {
-        let endpoint = "locations/\(id)"
-        apiService.fetch(endpoint, completion: completion)
+        // let endpoint = "locations/\(id)"
+        // apiService.fetch(endpoint, completion: completion)
+        completion(.success(PlaceDetail.mock()))
     }
 }
