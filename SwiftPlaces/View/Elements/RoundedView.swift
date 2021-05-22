@@ -8,10 +8,35 @@
 import UIKit
 
 class RoundedView: UIView {
+    
+    // MARK: Initialization
+    convenience init(frame: CGRect, cornerRadius: CGFloat) {
+        self.init(frame: CGRect.zero)
+        changeCornerRadius(cornerRadius)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.masksToBounds = true
+    }
+    
+    // MARK: Custom View
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = true
+            changeCornerRadius(cornerRadius)
         }
+    }
+    
+    private func changeCornerRadius(_ cornerRadius: CGFloat) {
+        layer.cornerRadius = cornerRadius
     }
 }

@@ -10,10 +10,14 @@ import SDWebImage
 
 class PlaceDetailPhotoCollectionViewCodeViewCell: UICollectionViewCell {
 
-    private lazy var roundedView: RoundedView = { return RoundedView(frame: .zero) }()
+    static let reusableIdentifier: String = "placeDetailPhotoCell"
+
+    private lazy var roundedView: RoundedView = { return RoundedView(frame: .zero, cornerRadius: 10) }()
     private lazy var imageView: UIImageView = { return UIImageView(frame: .zero) }()
     
-    // MARK: - Initialization
+    var placeDetail: PlaceDetailViewModel?
+
+    // MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -23,8 +27,16 @@ class PlaceDetailPhotoCollectionViewCodeViewCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
+        applyViewCode()
         configureViews()
     }
+    
+    func setImage(from urlString: String?) {
+        if let imageUrl = urlString, let url = URL(string: imageUrl) {
+            imageView.sd_setImage(with: url)
+        }
+    }
+    
 }
 
 extension PlaceDetailPhotoCollectionViewCodeViewCell: ViewCodeConfiguration {
@@ -39,7 +51,6 @@ extension PlaceDetailPhotoCollectionViewCodeViewCell: ViewCodeConfiguration {
     }
     
     func configureViews() {
-        roundedView.backgroundColor = .topaz
-        imageView.image = UIImage(named: "starOn")
+        imageView.clipsToBounds = true
     }
 }

@@ -13,6 +13,7 @@ enum BondType {
     case bondToLeading
     case bondToTrailing
     case fillSuperView
+    case equalWidth
     case fullWidth
     case fullHeight
     case width(CGFloat)
@@ -61,6 +62,8 @@ extension UIView {
         case .fullWidth:
             self.leadingAnchor.constraint(equalTo: toView.leadingAnchor).isActive = true
             self.trailingAnchor.constraint(equalTo: toView.trailingAnchor).isActive = true
+        case .equalWidth:
+            self.widthAnchor.constraint(equalTo: toView.widthAnchor, multiplier: 1.0).isActive = true
         case .sameCenterX:
             self.centerXAnchor.constraint(equalTo: toView.centerXAnchor).isActive = true
         case .sameCenterY:
