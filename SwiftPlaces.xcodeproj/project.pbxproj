@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		06683DFAE4F805F542FD5383 /* Pods_SwiftPlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE28E6141FEC14D6080D127 /* Pods_SwiftPlacesTests.framework */; };
 		072DE34B2637781200003438 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072DE34A2637781200003438 /* ShadowView.swift */; };
+		07606E8F2659469F003C9DAA /* PlaceDetailPhotoCollectionViewCodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07606E8E2659469F003C9DAA /* PlaceDetailPhotoCollectionViewCodeViewCell.swift */; };
 		076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */; };
 		076D28ED2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */; };
 		076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28F02638DF0D007F5FE7 /* Strings.swift */; };
 		076D28F42638DF5E007F5FE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076D28F62638DF5E007F5FE7 /* Localizable.strings */; };
 		076D28FB2638E210007F5FE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28FA2638E210007F5FE7 /* Config.swift */; };
 		076D28FD2638E319007F5FE7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D28FC2638E319007F5FE7 /* Error.swift */; };
+		0775BBA0265921D200413184 /* ViewCodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775BB9F265921D200413184 /* ViewCodeHelper.swift */; };
+		0775BBA32659221C00413184 /* PlacesDetailsViewCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775BBA22659221C00413184 /* PlacesDetailsViewCodeViewController.swift */; };
+		0775BBA52659284600413184 /* ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775BBA42659284600413184 /* ConstraintHelper.swift */; };
 		079F62C9263585AA0029A2C5 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62C8263585AA0029A2C5 /* Labels.swift */; };
 		079F62CE263585F20029A2C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F62CD263585F20029A2C5 /* Fonts.swift */; };
 		079F62D6263588450029A2C5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 079F62D42635883A0029A2C5 /* OpenSans-Regular.ttf */; };
@@ -70,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		072DE34A2637781200003438 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		07606E8E2659469F003C9DAA /* PlaceDetailPhotoCollectionViewCodeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotoCollectionViewCodeViewCell.swift; sourceTree = "<group>"; };
 		076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		076D28F02638DF0D007F5FE7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -77,6 +82,9 @@
 		076D28F72638DF6B007F5FE7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		076D28FA2638E210007F5FE7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		076D28FC2638E319007F5FE7 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		0775BB9F265921D200413184 /* ViewCodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeHelper.swift; sourceTree = "<group>"; };
+		0775BBA22659221C00413184 /* PlacesDetailsViewCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDetailsViewCodeViewController.swift; sourceTree = "<group>"; };
+		0775BBA42659284600413184 /* ConstraintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintHelper.swift; sourceTree = "<group>"; };
 		079F62C8263585AA0029A2C5 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		079F62CD263585F20029A2C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		079F62D32635883A0029A2C5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -154,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0775BBA1265921FE00413184 /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				0775BBA22659221C00413184 /* PlacesDetailsViewCodeViewController.swift */,
+			);
+			path = ViewCode;
+			sourceTree = "<group>";
+		};
 		079F62D2263588210029A2C5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +334,8 @@
 				072DE34A2637781200003438 /* ShadowView.swift */,
 				076D28F02638DF0D007F5FE7 /* Strings.swift */,
 				076D28FC2638E319007F5FE7 /* Error.swift */,
+				0775BB9F265921D200413184 /* ViewCodeHelper.swift */,
+				0775BBA42659284600413184 /* ConstraintHelper.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -334,6 +352,7 @@
 		07C6B19E2636239E00774C08 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				0775BBA1265921FE00413184 /* ViewCode */,
 				07A2A76E2634511600CC7B95 /* PlacesDetailsViewController.swift */,
 				07A2A76F2634511600CC7B95 /* PlacesDetailsViewController.xib */,
 			);
@@ -346,6 +365,7 @@
 				07A2A79B263466C700CC7B95 /* PlaceCardCollectionViewCell.swift */,
 				07A2A79C263466C700CC7B95 /* PlaceCardCollectionViewCell.xib */,
 				076D28EA2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift */,
+				07606E8E2659469F003C9DAA /* PlaceDetailPhotoCollectionViewCodeViewCell.swift */,
 				076D28EB2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.xib */,
 			);
 			path = Cells;
@@ -621,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A2A77B2634527D00CC7B95 /* MainRouter.swift in Sources */,
+				0775BBA0265921D200413184 /* ViewCodeHelper.swift in Sources */,
 				07A2A7AC2634816B00CC7B95 /* Colors.swift in Sources */,
 				079F62EF26359A4A0029A2C5 /* Schedule.swift in Sources */,
 				079F62CE263585F20029A2C5 /* Fonts.swift in Sources */,
@@ -629,6 +650,7 @@
 				079F62F92635AC210029A2C5 /* PlacesService.swift in Sources */,
 				076D28FD2638E319007F5FE7 /* Error.swift in Sources */,
 				076D28F12638DF0D007F5FE7 /* Strings.swift in Sources */,
+				0775BBA52659284600413184 /* ConstraintHelper.swift in Sources */,
 				079F62FE2635AD930029A2C5 /* APIService.swift in Sources */,
 				079F62EA26359A410029A2C5 /* PlaceDetail.swift in Sources */,
 				07A2A79D263466C700CC7B95 /* PlaceCardCollectionViewCell.swift in Sources */,
@@ -638,9 +660,11 @@
 				079F62F426359B510029A2C5 /* PlaceDetailViewModel.swift in Sources */,
 				07A2A7702634511600CC7B95 /* PlacesDetailsViewController.swift in Sources */,
 				07A2A7A42634703500CC7B95 /* RoundedView.swift in Sources */,
+				07606E8F2659469F003C9DAA /* PlaceDetailPhotoCollectionViewCodeViewCell.swift in Sources */,
 				076D28EC2638CD84007F5FE7 /* PlaceDetailPhotoCollectionViewCell.swift in Sources */,
 				07FB74B82636287E00900CE9 /* Photo.swift in Sources */,
 				076D28FB2638E210007F5FE7 /* Config.swift in Sources */,
+				0775BBA32659221C00413184 /* PlacesDetailsViewCodeViewController.swift in Sources */,
 				079F62E526358E0E0029A2C5 /* Place.swift in Sources */,
 				07A2A776263451F000CC7B95 /* PlacesHomePresenter.swift in Sources */,
 				07A2A75B2634506000CC7B95 /* PlacesRouter.swift in Sources */,

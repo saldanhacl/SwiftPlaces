@@ -12,7 +12,7 @@ protocol PlacesDetailsPresenterDelegate: class {
 }
 
 class PlacesDetailsPresenter {
-    weak var view: PlacesDetailsViewController?
+    weak var view: PlacesDetailsViewCodeViewController?
     weak var delegate: PlacesDetailsPresenterDelegate?
     private let photosService = PhotosService()
 

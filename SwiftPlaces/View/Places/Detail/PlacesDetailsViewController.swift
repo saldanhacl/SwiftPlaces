@@ -33,7 +33,7 @@ class PlacesDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.setupLabels()
-        self.presenter?.view = self
+        // self.presenter?.view = self
         self.presenter?.getPlaceDetailImages()
         self.setupCollectionView()
     }

@@ -25,7 +25,7 @@ class PlacesRouter: PlacesRouterProtocol {
     }
 
     func gotoPlaceDetail(_ placeDetail: PlaceDetailViewModel) {
-        let detailViewController = PlacesFactory.makePlacesDetail(placeDetail, delegate: self)
+        let detailViewController = PlacesFactory.makePlacesDetailViewCode(placeDetail, delegate: self)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

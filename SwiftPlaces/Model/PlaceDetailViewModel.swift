@@ -11,6 +11,7 @@ class PlaceDetailViewModel {
     private let placeDetail: PlaceDetail
     
     var name: String!
+    var reviewScore: Double!
     var review: String!
     var about: String!
     var timeSchedule: String!
@@ -26,6 +27,7 @@ class PlaceDetailViewModel {
     
     func prepare() {
         self.name = placeDetail.name
+        self.reviewScore = placeDetail.review
         self.review = String(placeDetail.review)
         self.about = placeDetail.about
         self.timeSchedule = "seg a sex: 7h às 23h\nsáb e dom: 8h às 20h"

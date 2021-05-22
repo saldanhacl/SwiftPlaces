@@ -25,6 +25,10 @@ extension UIColor {
         return topaz
     }
     
+    public class func getBackgroundColor() -> UIColor {
+        return cultured
+    }
+    
     // MARK: Colors
     
     @nonobjc public class var duckEggBlue: UIColor {
@@ -49,5 +53,9 @@ extension UIColor {
     
     @nonobjc public class var warmGrey: UIColor {
         return #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+    }
+    
+    @nonobjc public class var cultured: UIColor {
+        return #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
     }
 }
